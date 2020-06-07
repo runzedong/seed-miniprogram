@@ -1,13 +1,25 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <div class="topnav">
+      <a href="#">蔬菜信息</a>
+      <a href="#">我的菜园</a>
+    </div>
+    <div class="main">
+      <image src="../resources/chineseMap.jpg" mode="widthFix" bindload="imageLoad"
+style="width:550rpx;"></image>
+      <view>
+        <view>黄色：1-3月播种</view>
+        <view>橙色：4-9月播种</view>
+        <view>绿色：10-12月播种</view>
+      </view>
+    </div>
+    <div class="sidenav">
+      <a href="#">黄瓜</a>
+      <a href="#">番茄</a>
+      <a href="#">香菜</a>
+      <a href="#">豌豆</a>
+    </div>
+  </block>
 </view>

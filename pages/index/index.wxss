@@ -1,21 +1,77 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 0px;
+  position: fixed;
+  left: 80px;
+  top: 0px;
+  font-size: 25px;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0px;
+  left: 80px;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.usermotto {
-  margin-top: 200px;
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #111;
+}
+
+.sidenav {
+  height: 100%;
+  width: 80px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  transition: margin-left .5s;
+  padding: 0px;
+  position: absolute;
+  left: 80px;
+  top: 64px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .main {padding-left: 20px;}
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .topnav {padding-left: 100px;}
+  .header {padding-left: 80px;}
 }
