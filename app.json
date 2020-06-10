@@ -10,6 +10,23 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#13b2ae",
+    "borderStyle": "black",
+    "backgroudColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "/pages/resources/florist_black_round_24dp.png",
+      "selectedIconPath": "/pages/resources/florist_black_round_24dp.png",
+      "text": "蔬菜"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "iconPath": "/pages/resources/storefront_black_round_24dp.png",
+      "selectedIconPath": "/pages/resources/storefront_black_round_24dp.png",
+      "text": "菜园"
+    }]
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
