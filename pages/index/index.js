@@ -12,10 +12,12 @@ Page({
     vegeList: []
   },
   
-  //事件处理函数
-  bindViewTap: function() {
+  navToInfoPage: function(event) {
+    const navPage = event.currentTarget.dataset['page'] 
+    const item = event.currentTarget.dataset['item']
+    const navLink = navPage + '?item=' + item;
     wx.navigateTo({
-      url: '../logs/logs'
+      url: navLink
     })
   },
   onLoad: function () {
