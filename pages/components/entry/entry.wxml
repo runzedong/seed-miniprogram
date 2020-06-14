@@ -1,0 +1,7 @@
+<view class="entry-wrapper">
+	<button bindtap='customMethod'>
+		<image src="{{entryIcon}}" mode="aspectFill" style="width:150rpx;height:150rpx" />
+		{{entryText}}
+	</button>
+	<slot></slot>
+</view>
