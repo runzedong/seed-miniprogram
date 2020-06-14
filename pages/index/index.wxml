@@ -3,15 +3,10 @@
 <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
 <block wx:else>
 
-	<view wx:for="{{vegeList}}">
+	<view wx:for="{{vegeList}}" wx:key="name">
 		<view class="flex-row" style="display: flex;">
-			<div>
-				<button>
-					<image src="{{item.icon}}" mode="aspectFill" style="width:150rpx;height:150rpx;" />{{item.name}}</button>
-			</div>
+			<vege-entry entryText="{{item.name}}" entryIcon="{{item.icon}}"></vege-entry>
 		</view>
 	</view>
-
-	<vege-entry entryText="黄瓜" entryIcon="/pages/resources/cucumber_icon.JPG"></vege-entry>
 
 </block>

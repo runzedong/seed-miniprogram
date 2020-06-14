@@ -1,7 +1,5 @@
-<view class="entry-wrapper">
-	<button bindtap='customMethod'>
-		<image src="{{entryIcon}}" mode="aspectFill" style="width:150rpx;height:150rpx" />
-		{{entryText}}
-	</button>
+<view class="entry-wrapper" bindtap="customMethod">
+	<image class="entry-img" src="{{entryIcon}}" mode="aspectFit"/>
+  <text class="entry-text"> {{entryText}}</text>
 	<slot></slot>
 </view>
